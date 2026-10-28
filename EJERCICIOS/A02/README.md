@@ -1,42 +1,51 @@
-# 🗺️ Actividad 02 (A02): Planificador de Rutas a Talleres Cercanos
+# 📊 Actividad 02 (A02): Análisis Exploratorio de Datos (EDA)
 
-¡Bienvenido/a a la segunda práctica de la asignatura **TPIA**! En esta actividad desarrollaremos una herramienta geoespacial interactiva en Python que sea capaz de procesar una dirección, encontrar los talleres mecánicos más cercanos y calcular la ruta óptima para llegar a ellos.
+¡Bienvenido/a a la segunda práctica de la asignatura **TPIA**! En esta actividad profundizaremos en las fases iniciales de todo proyecto de ciencia de datos: la carga estructurada, preparación y el **Análisis Exploratorio de Datos (EDA)**, siguiendo las directrices vistas en el Tema 4.
 
----
-
-## 🛠️ Requisitos de la Práctica
-
-El programa debe cumplir con los siguientes pasos lógicos en su ejecución:
-
-1. **Entrada de Usuario:** 
-   * Solicitar al usuario una dirección de origen o punto de interés por consola.
-2. **Geolocalización:** 
-   * Convertir la dirección introducida en coordenadas geográficas (latitud y longitud).
-3. **Carga de Datos de Talleres:** 
-   * Importar un conjunto de datos desde un archivo `.csv` que contenga la información y ubicación de los talleres disponibles.
-4. **Cálculo de Proximidad:** 
-   * Procesar las ubicaciones para determinar cuáles son los talleres más cercanos a la dirección ingresada.
-5. **Cálculo y Visualización de la Ruta:** 
-   * Calcular la ruta más corta hacia el taller seleccionado y generar un mapa interactivo que muestre visualmente el trayecto.
+Esta entrega servirá como nuestro **benchmark de partida individual**, evaluando la profundidad de los análisis y la calidad de la redacción técnica propia (sin asistencia de IA generativa).
 
 ---
 
-## 📚 Librerías Obligatorias a Utilizar
+## 🛠️ Parte 1: Análisis Exploratorio del Dataset de Automóviles (`car.data`)
 
-Para resolver este reto, deberás hacer uso de las siguientes librerías de Python:
+El objetivo de esta sección es procesar el archivo `car.data` y documentar un informe EDA estructurado.
 
-* **`pandas`**: Para la lectura, manipulación y filtrado de los datos de los talleres almacenados en el archivo CSV.
-* **`geopy`**: Para la geolocalización de direcciones y el cálculo de distancias geográficas.
-* **`folium`**: Para la generación del mapa interactivo y la representación visual de la ruta y los puntos de interés.
-* **`csv`**: Para la gestión de la importación de datos tabulares.
+### 📋 Requisitos y pasos a seguir:
+1. **Carga y preparación del DataFrame:**
+   * Importar el archivo de datos `car.data`.
+   * Consultar el fichero complementario de nombres/metadatos (`car.names`) para identificar y asignar correctamente las cabeceras a cada columna del DataFrame.
+2. **Estructura del Informe EDA (según Tema 4):**
+   * **Comprensión del problema y los datos:** Tipos de variables, dimensiones y balance de clases.
+   * **Limpieza de datos:** Comprobación de valores nulos, registros duplicados o inconsistencias.
+   * **Análisis univariable:** Distribución de variables categóricas/numéricas.
+   * **Análisis bivariable / multivariable:** Relación entre características y la variable objetivo.
+   * **Conclusiones e insights:** Hallazgos clave resumidos con redacción técnica clara y fundamentada.
 
 ---
 
-## 📋 Estructura Sugerida del Archivo CSV
+## 🏗️ Parte 2: Análisis Exploratorio de Resistencia a la Compresión
 
-Tu archivo de datos (`talleres.csv`) debería contar al menos con columnas similares a estas para que el script pueda procesarlo correctamente:
+En este segundo cuaderno se aplicará la misma metodología analítica sobre el dataset de **resistencia a la compresión** (hormigón / materiales).
 
-```text
-nombre,direccion,latitud,longitud
-"Taller Mecánico El Rápido","Calle Mayor 12, Ciudad",40.4168,-3.7038
-"Reparaciones Gómez","Avenida de la Paz 45, Ciudad",40.4200,-3.7100
+### 🎯 Objetivos de la sección:
+* Desarrollar un segundo notebook independiente con el análisis completo de los datos de resistencia a la compresión.
+* Seguir la guía estándar de informe de EDA vista en clase:
+  * Inspección estadística inicial (medias, varianzas, rangos).
+  * Análisis de correlaciones entre componentes y la resistencia resultante.
+  * Visualizaciones clave (histogramas, boxplots, diagramas de dispersión o mapas de calor).
+  * Interpretación analítica redactada con rigor técnico.
+
+---
+
+## 📦 Criterios de Evaluación y Entrega
+
+### 🔍 ¿Qué se evaluará?
+* **Profundidad y rigor del análisis:** Capacidad para extraer conclusiones relevantes a partir de las visualizaciones y métricas.
+* **Calidad de redacción:** Claridad, coherencia, terminología técnica adecuada y análisis crítico propio (nuestro benchmark sin IA).
+* **Organización del código:** Buenas prácticas en Python (`pandas`, `matplotlib`, `seaborn`), comentarios oportunos y celdas limpias.
+
+### ⏰ Plazo y Formato:
+* **Fecha límite:** **Miércoles** a través del **Panal**.
+* **Formato de entrega:** Dos cuadernos Jupyter en formato `.ipynb` (uno para el dataset de coches y otro para el de resistencia a la compresión), debidamente ejecutados y con sus salidas visibles.
+
+> 💡 **Nota de entrega:** Asegúrate de que los archivos de datos estén referenciados mediante rutas relativas para garantizar la reproducibilidad de los cuadernos. ¡Mucho éxito en el análisis!
